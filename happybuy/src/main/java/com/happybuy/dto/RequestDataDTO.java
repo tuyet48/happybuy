@@ -5,6 +5,8 @@ public class RequestDataDTO<T> {
 	private T data;	
 	private MetaData metadata;
 	
+	//getter and setter
+	
 	public T getData() {
 		return data;
 	}

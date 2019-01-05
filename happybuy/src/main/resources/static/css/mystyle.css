@@ -102,6 +102,7 @@ li{
 .banner{   
     display: grid; 
     width: 100%;
+    margin-bottom: 30px;
 }
 .section-title1{  
     text-align: center;
@@ -231,7 +232,13 @@ a:hover{
     text-align: center;    
 }
 .viewed-items img{
-    height: 200px;
+    height: 200px;   
+}
+.prodByCate{
+    margin-bottom: 35px;      
+}
+.prodByCate img{
+    height: 330px;   
 }
 .contact-info{
     margin-top: 160px;
@@ -618,5 +625,9 @@ tr:nth-child(even) {
 }
 .map{
     height: 372px;
+}
+.page-navigation{
+    margin: auto;
+    width: 40%;    
 }
 

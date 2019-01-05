@@ -13,5 +13,6 @@ public interface ProductService {
 	List<Product> findBySize(String size);
 	List<Product> findLatest();
 	List<Product> findProdByCate(RequestDataDTO<Integer> requestData);
+	int countPage(int categoryId, int itemPerPage);
 
 }

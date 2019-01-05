@@ -17,7 +17,7 @@ happybuy.config(function ($routeProvider) {
             templateUrl: "views/contact.html",
             controller: "ContactCtrl"
         })
-        .when("/product",{
+        .when("/product", {
             templateUrl: "views/product.html",
             controller: "ProductCtrl"
         })

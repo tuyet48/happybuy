@@ -77,5 +77,12 @@ public class ProductController {
 		}		
 	}	
 	
-	
+	@RequestMapping(value = "count-pages", method = RequestMethod.GET)
+	@ResponseBody
+	public ResponseEntity<Integer> countPage(@RequestParam("categoryId") int categoryId, 
+			@RequestParam("itemPerPage") int itemPerPage){
+		int totalNums = productService.countPage(categoryId, itemPerPage);					
+		return new ResponseEntity<Integer>(totalNums, HttpStatus.OK);
+		
+	}	
 }

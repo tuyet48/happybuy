@@ -49,7 +49,20 @@ public class ProductServiceImpl implements ProductService{
 	public List<Product> findProdByCate(RequestDataDTO<Integer> requestData) {
 		List<Product> products = productRepository.findProdByCate(requestData);	
 		return products;
-	}	
-	
+	}
 
+	@Override
+	public int countPage(int categoryId, int itemPerPage) {
+		/*
+		 * totalProds = 27 , itemPerPage = 9 ==> totalNums = 27/9 = 3
+		 * totalProds = 28 , itemPerPage = 9 ==> totalNums = 28/9 = 3 + 1
+		 */
+		int totalProds = productRepository.countPage(categoryId);	
+		int remain = totalProds % itemPerPage;
+		int totalNums = totalProds/itemPerPage;
+		if (remain != 0) {
+			totalNums ++;
+		}
+		return totalNums;
+	}	
 }

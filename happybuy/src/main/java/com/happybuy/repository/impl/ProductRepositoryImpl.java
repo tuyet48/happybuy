@@ -93,5 +93,16 @@ public class ProductRepositoryImpl implements ProductRepository{
 		query.setMaxResults(requestData.getMetadata().getPageSize());
 		return query.getResultList();	
 	}
+
+	@Override
+	public int countPage(int categoryId) {
+		CriteriaBuilder cb = em.getCriteriaBuilder();
+		CriteriaQuery<Product> cq = cb.createQuery(Product.class);
+		Root<Product> root = cq.from(Product.class);
+		cq.select(root);
+		cq.where(cb.equal(root.get("category").get("id"), categoryId));
+		Query query = em.createQuery(cq);		
+		return query.getResultList().size();
+	}	
 	
 }

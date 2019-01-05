@@ -1,1 +1,19 @@
-<h1>This is {{categoryId}} Page</h1>
+<div class="content">
+    <div class="row">
+        <div class="col-md-4 prodByCate" ng-repeat="product in products">
+            <a href="men1.com"><img src="{{product.image}}"></a>
+            <div class="description">
+                <li>{{product.name}}</li>
+                <li><delete>$ {{product.regularPrice}}</delete></li>
+                <li>Sale $ {{product.salePrice}}</li>
+            </div>
+        </div>
+    </div>
+    <nav class="page-navigation">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="#">First</a></li>         
+            <li class="page-item" ng-repeat="i in pageList track by $index"><a class="page-link" href="#">{{$index+1}}</a></li>          
+            <li class="page-item"><a class="page-link" href="#">Last</a></li>
+        </ul>
+    </nav>   
+</div>

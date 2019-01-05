@@ -14,5 +14,6 @@ public interface ProductRepository {
 	List<Product> findByCate(String cate);
 	List<Product> findLatest();
 	List<Product> findProdByCate(RequestDataDTO<Integer> requestData);
+	int countPage(int categoryId);
 
 }

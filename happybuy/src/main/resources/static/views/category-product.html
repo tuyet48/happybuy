@@ -11,9 +11,10 @@
     </div>
     <nav class="page-navigation">
         <ul class="pagination justify-content-center">
-            <li class="page-item"><a class="page-link" href="#">First</a></li>         
-            <li class="page-item" ng-repeat="i in pageList track by $index"><a class="page-link" href="#">{{$index+1}}</a></li>          
-            <li class="page-item"><a class="page-link" href="#">Last</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0)" ng-click="clickPage(1)">First</a></li>         
+            <li class="page-item" ng-repeat="i in pageList">
+                <a class="page-link" href="javascript:void(0)" ng-click="clickPage(i)">{{i}}</a></li>          
+            <li class="page-item"><a class="page-link" href="javascript:void(0)" ng-click="clickPage(maxSize)">Last</a></li>
         </ul>
     </nav>   
 </div>

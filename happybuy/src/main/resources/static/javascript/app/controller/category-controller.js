@@ -1,5 +1,5 @@
-happybuy.controller('CategoryProductCtrl', ['$scope','$http','$window','$rootScope', 'AuthService', '$routeParams',
-function($scope, $http, $window, $rootScope, authService, $routeParams){
+happybuy.controller('CategoryProductCtrl', ['$scope','$http','AuthService','$routeParams',
+function($scope, $http, authService, $routeParams){
 	
 	$scope.maxSize = 0;
 	$scope.categoryId = $routeParams.categoryId;  
@@ -10,7 +10,7 @@ function($scope, $http, $window, $rootScope, authService, $routeParams){
 			"data": $scope.categoryId,
 			"metadata": {
 				"pageNumber": pageNumber,
-				"pageSize": 15              
+				"pageSize": 9         
 				}            
 			}	
 			console.log("request: ", request);			
@@ -36,7 +36,7 @@ function($scope, $http, $window, $rootScope, authService, $routeParams){
 			method: "GET",
 			params: {
 				categoryId: $scope.categoryId,
-				itemPerPage: 15
+				itemPerPage: 9
 			}
 		})
 		.then(function(res){

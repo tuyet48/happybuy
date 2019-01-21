@@ -4,21 +4,13 @@ happybuy.config(function ($routeProvider) {
         .when("/home", {
             templateUrl: "views/home.html",
             controller: "HomeCtrl"
-        })
-        .when("/women", {
-            templateUrl: "views/women.html",
-            controller: "WomenCtrl"
-        })
+        })       
         .when("/about", {
             templateUrl: "views/about.html",
             controller: "AboutCtrl"
-        })
-        .when("/contact", {
-            templateUrl: "views/contact.html",
-            controller: "ContactCtrl"
-        })
-        .when("/product", {
-            templateUrl: "views/product.html",
+        })        
+        .when("/product/:productId", {
+            templateUrl: "views/product-detail.html",
             controller: "ProductCtrl"
         })
         .when("/category/:categoryId",{

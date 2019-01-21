@@ -76,8 +76,18 @@ VALUES (13, 'Polo', 'Black', 'Boy Cotton Shirt', 2 , 27.00, 15.99, 'M', 3);
 INSERT INTO PRODUCT (id, brand, color, name, quantity, regular_price, sale_price, size, category_id) 
 VALUES (14, 'INC', 'Navy', 'Boy Thermal Shirt', 5 , 56.00, 49.99, 'XL', 3);
 
-INSERT INTO PRODUCT (id, brand, color, name, quantity, regular_price, sale_price, size, category_id) 
+INSERT INTO PRODUCT (id, brand, color, name, quantity, regular_price, sale_price, size, category_id)
 VALUES (15, 'Rare', 'White', 'Boy Waffle-Knit Jogger Pants', 3 , 56.00, 56.99, 'S', 3);
+
+INSERT INTO IMAGE (id, image, product_id) VALUES (1, 'assets/women12.jpg', 1);
+
+INSERT INTO IMAGE (id, image, product_id) VALUES (2, 'assets/girlcoatdress.jpg', 12);
+
+INSERT INTO IMAGE (id, image, product_id) VALUES (3, 'assets/girlcoatdress2.jpg', 12);
+
+INSERT INTO IMAGE (id, image, product_id) VALUES (4, 'assets/girlcoatdress3.jpg', 12);
+
+INSERT INTO IMAGE (id, image, product_id) VALUES (5, 'assets/girlcoatdress4.jpg', 12);
 
 
 

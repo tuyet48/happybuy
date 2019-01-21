@@ -40,9 +40,11 @@ public class ProductController {
 	
 	@RequestMapping(value = "find-id", method = RequestMethod.GET)
 	@ResponseBody	
-	public Product findProduct (@RequestParam("id") int id) {
-		Product product = productService.findById(id);			
-		return product;
+	public ProductDTO findProduct (@RequestParam("id") int id) {
+		Product product = productService.findById(id);	
+		ProductDTO prodDto = new ProductDTO();
+		prodDto.copy(product);
+		return prodDto;
 	}
 
 	@RequestMapping(value = "find-color", method = RequestMethod.GET)

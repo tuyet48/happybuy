@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.happybuy.dto.RequestDataDTO;
+import com.happybuy.model.Image;
 import com.happybuy.model.Product;
 import com.happybuy.repository.ProductRepository;
 import com.happybuy.service.ProductService;
@@ -25,6 +26,12 @@ public class ProductServiceImpl implements ProductService{
 	@Override
 	public Product findById(int id) {
 		List<Product> products = productRepository.findById(id);
+		for (Product p: products) {
+			List<Image>images = p.getImages();
+			for (Image im: images) {
+				System.out.println(im.getImage());				
+			}					
+		}
 		return products.get(0);
 	}
 

@@ -1,7 +1,10 @@
 package com.happybuy.dto;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
+import com.happybuy.model.Image;
 import com.happybuy.model.Product;
 
 public class ProductDTO {
@@ -13,8 +16,10 @@ public class ProductDTO {
 	private BigDecimal regularPrice;
 	private BigDecimal salePrice;
 	private String size;
+	private String color;
 	
-	
+	private List<String> images = new ArrayList();	
+		
 	public void copy(Product product) {
 		this.id = product.getId();
 		this.name = product.getName();
@@ -22,9 +27,28 @@ public class ProductDTO {
 		this.img = product.getImage();
 		this.regularPrice = product.getRegularPrice();
 		this.salePrice = product.getSalePrice();	
-		this.size = product.getSize();		
+		this.size = product.getSize();	
+		this.color = product.getColor();
+		List<Image> ims = product.getImages();
+		for (Image image: ims) {
+			images.add(image.getImage());			
+		}
 	}
 
+	public List<String> getImages() {
+		return images;
+	}
+
+	public void setImages(List<String> images) {
+		this.images = images;
+	}
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
 	public String getSize() {
 		return size;
 	}
@@ -80,7 +104,6 @@ public class ProductDTO {
 	public void setSalePrice(BigDecimal salePrice) {
 		this.salePrice = salePrice;
 	}
-	
 	
 
 }

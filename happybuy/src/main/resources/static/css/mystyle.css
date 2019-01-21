@@ -430,7 +430,7 @@ ul.breadcrumb li a:hover {
 .details li .btn-addToCart{
     width: 48%;
     height: 45px;
-    margin-top: 40px;
+    margin-top: 10px;
     font-size: 15px;
     background-color: orange;
     border: 0;
@@ -487,6 +487,14 @@ ul.breadcrumb li a:hover {
 }
 .navy{
     background-color: navy;
+    border: 0;
+}
+.gold{
+    background-color: gold;
+    border: 0;
+}
+.silver{
+    background-color: silver;
     border: 0;
 }
 .user-rating{

@@ -41,7 +41,8 @@ public class ProductRepositoryImpl implements ProductRepository{
 		cq.select(root);
 		cq.where(cb.equal(root.get("id"), id));		
 		Query query = em.createQuery(cq);
-		return query.getResultList();
+		List<Product>prodList = query.getResultList();
+		return prodList;
 	}
 
 	@Override

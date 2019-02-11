@@ -1,0 +1,160 @@
+<div class="content">
+    <div class="breadcrumb">
+        <ul class="breadcrumb">
+            <li><a href="#">KIDS</a></li>
+            <li><a href="#">GIRLS</a></li>
+            <li><a href="#">SIZE 6-17</a></li>
+            <li>COATS & DRESSES</li>
+        </ul>
+    </div>
+    <div class="row product-details">
+        <div class="col-md-2 add-pics">
+            <div class="add-pic" ng-repeat="image in product.images">
+                <img src="{{image}}" ng-click="getMyImage(image)">               
+            </div>           
+        </div>
+        <div class="col-md-5 main-pic">            
+            <img src="{{selectedImage}}">
+        </div>
+        <div class="col-md-5 details">
+            <ul>
+                <li>
+                    <h2>{{product.brand}}</h2>
+                </li>
+                <li>
+                    <h3>{{product.name}}</h3>
+                </li>
+                <li class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </li>
+                <li class="original">${{product.regularPrice}}</li>
+                <li class="saving">Sale ${{product.salePrice}}</li>
+                <li class="specification">Color: {{selectedColor | uppercase}}</li>
+                <li>
+                    <button class="{{color}}" ng-repeat="color in colorArray" ng-click="getMyColor(color)">{{color | uppercase}}</button>                    
+                </li>
+                <br>
+                <li class="specification">Size: {{selectedSize}}</li>
+                <li>
+                    <button ng-repeat="size in sizeArray" ng-click="getMySize(size)">{{size}}</button>                                        
+                </li>
+                <br>
+                <li class="specification">
+                    Quanity
+                </li>
+                <li class="specification">
+                  <input type="number" min="1" max="100">
+                </li>
+                <li><button class="btn-addToCart">ADD TO CART</button></li>
+            </ul>
+        </div>
+    </div>
+    <div class="review">
+        <h4>AVERAGE CUSTOMER RATINGS</h4>
+        <div class="row user-rating">
+            <div class="side">
+                <div>5 star</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-5"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>150</div>
+            </div>
+            <div class="side">
+                <div>4 star</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-4"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>63</div>
+            </div>
+            <div class="side">
+                <div>3 star</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-3"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>15</div>
+            </div>
+            <div class="side">
+                <div>2 star</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-2"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>6</div>
+            </div>
+            <div class="side">
+                <div>1 star</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-1"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>20</div>
+            </div>
+        </div>
+        <h4>REVIEWS</h4><br>
+        <span>Be the first to</span><br>
+        <button class="write-review">Write a review</button>       
+        <div class="comment">
+            <div class="stars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </div>
+            <p>December 5, 2018</p>
+            <span class="saving">CUTE BUY</span>
+            <p>My daughter loved this jacket, now she has a moto jacket similar to one that I have,
+                but its age appropriate for a 6yo.
+            </p>
+        </div>
+        <div class="comment" ng-repeat="review in reviews">
+            <div class="stars">
+                <!-- <span class="fa fa-star" ng-class="{'fa fa-star checked]:  }" ng-repeat="i in getNumber() track by $index"></span> -->
+                <span class="fa fa-star checked" ng-repeat="i in getNumber(review.rating) track by $index"></span>   
+                <span class="fa fa-star" ng-repeat="i in getNumber(5-review.rating) track by $index"></span>  
+            </div>
+            <p>{{review.createDate}}</p>
+            <span class="saving">{{review.title}}</span>
+            <p>{{review.comment}}</p>
+        </div>
+    </div>
+    <div class="row may-also-like">
+        <div class="section-title1">
+            <h3>YOU MAY ALSO LIKE</h3>
+        </div>
+        <div class="col-md-3">
+            <img src="assets/girlcoatdress5.jpg">
+        </div>
+        <div class="col-md-3">
+            <img src="assets/girlcoatdress6.jpg">
+        </div>
+        <div class="col-md-3">
+            <img src="assets/girlcoatdress7.jpg">
+        </div>
+        <div class="col-md-3">
+            <img src="assets/girlcoatdress8.jpg">
+        </div>
+    </div>
+</div>

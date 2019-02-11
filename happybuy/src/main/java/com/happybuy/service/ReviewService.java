@@ -4,8 +4,7 @@ import java.util.List;
 
 import com.happybuy.model.Review;
 
-public interface PostCommentService {
-	
+public interface ReviewService {
 	List<Review> findAll();
-
+	List<Review> findByProd(int id);
 }

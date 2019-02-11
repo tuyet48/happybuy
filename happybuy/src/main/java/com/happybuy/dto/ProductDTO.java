@@ -18,7 +18,7 @@ public class ProductDTO {
 	private String size;
 	private String color;
 	
-	private List<String> images = new ArrayList();	
+	private List<String> images = new ArrayList<String>();	
 		
 	public void copy(Product product) {
 		this.id = product.getId();

@@ -504,7 +504,7 @@ ul.breadcrumb li a:hover {
     margin-top: 30px;
 }
 .review{   
-    height: 800px;
+    height: auto;
     margin-bottom: 50px;
 }
 .review h4{

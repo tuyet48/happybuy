@@ -36,7 +36,7 @@ public class ProductController {
 			productDtos.add(prodDto);
 		}
 		return productDtos;
-	}
+	}	
 	
 	@RequestMapping(value = "find-id", method = RequestMethod.GET)
 	@ResponseBody	
@@ -64,18 +64,23 @@ public class ProductController {
 	@RequestMapping(value = "find-latest", method = RequestMethod.GET)
 	@ResponseBody
 	public ResponseEntity<List<Product>> findLatest(){		
-		return null;	
-		
+		return null;			
 	}
 	
 	@RequestMapping(value = "find-by-category", method = RequestMethod.POST)
 	@ResponseBody
-	public ResponseEntity<List<Product>> findProdByCate(@RequestBody RequestDataDTO<Integer> requestData){
+	public ResponseEntity<List<ProductDTO>> findProdByCate(@RequestBody RequestDataDTO<Integer> requestData){
 		List<Product> products = productService.findProdByCate(requestData);
 		if (products == null) {
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-		}else {			
-			return new ResponseEntity<List<Product>>(products, HttpStatus.OK);
+		}else {	
+			List<ProductDTO> prodDTOs= new ArrayList<ProductDTO>();
+			for (Product prod: products) {
+				ProductDTO prodDTO = new ProductDTO();
+				prodDTO.copy(prod);
+				prodDTOs.add(prodDTO);
+			}
+			return new ResponseEntity<List<ProductDTO>>(prodDTOs, HttpStatus.OK);
 		}		
 	}	
 	

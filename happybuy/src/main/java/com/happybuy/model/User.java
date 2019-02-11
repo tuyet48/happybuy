@@ -78,18 +78,23 @@ public class User implements UserDetails {
 			cascade = CascadeType.ALL,
 			orphanRemoval = true,
 			mappedBy = "user"			
-	)
-    
+	)    
 	private List<Order> invoices = new ArrayList<Order>();	
    
     @OneToMany(
     		cascade = CascadeType.ALL,
     		orphanRemoval = true,
     		mappedBy = "staff"
-    )
-    
+    )    
     private List<Order> orders = new ArrayList<Order>();
     
+    @OneToMany(
+    		cascade = CascadeType.ALL,
+    		orphanRemoval = true,
+    		mappedBy = "user"
+    )    
+    private List<Review> reviews = new ArrayList<Review>();    
+   
 
     public List<Order> getOrders() {
 		return orders;

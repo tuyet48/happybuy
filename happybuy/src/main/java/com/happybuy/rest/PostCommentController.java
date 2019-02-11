@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.happybuy.model.PostComment;
+import com.happybuy.model.Review;
 import com.happybuy.service.PostCommentService;
 
 @RestController
@@ -20,7 +20,7 @@ public class PostCommentController {
 	
 	@RequestMapping(value="comments", method=RequestMethod.GET)
 	@ResponseBody
-	public List<PostComment> getInfo() {
+	public List<Review> getInfo() {
 		return this.postCommentService.findAll();	
 	}
 }

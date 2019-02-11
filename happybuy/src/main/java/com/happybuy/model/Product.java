@@ -68,6 +68,18 @@ public class Product {
 	)
 	private List<Image> images = new ArrayList<Image>();
 	
+	@OneToMany(
+	    	cascade = CascadeType.ALL,
+	    	orphanRemoval = true,
+	    	mappedBy = "product"  		  
+	)
+	private List<Review> reviews = new ArrayList<Review>();
+	    
+	
+	public List<Review> getReviews() {
+		return reviews;
+	}
+
 	public List<Image> getImages() {
 		return images;
 	}
@@ -162,8 +174,6 @@ public class Product {
 
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
-	}
-
-	
+	}	
 
 }

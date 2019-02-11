@@ -4,11 +4,7 @@ happybuy.config(function ($routeProvider) {
         .when("/home", {
             templateUrl: "views/home.html",
             controller: "HomeCtrl"
-        })       
-        .when("/about", {
-            templateUrl: "views/about.html",
-            controller: "AboutCtrl"
-        })        
+        })      
         .when("/product/:productId", {
             templateUrl: "views/product-detail.html",
             controller: "ProductCtrl"

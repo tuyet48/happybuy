@@ -2,6 +2,12 @@
 INSERT INTO USERS (id, username, password, first_name, last_name, email, phone_number, enabled) VALUES (1, 'user', '$2a$04$Vbug2lwwJGrvUXTj6z7ff.97IzVBkrJ1XfApfGNl.Z695zqcnPYra', 'Fan', 'Jin', 'user@example.com', '+1234567890', true);
 INSERT INTO USERS (id, username, password, first_name, last_name, email, phone_number, enabled) VALUES (2, 'admin', '$2a$04$Vbug2lwwJGrvUXTj6z7ff.97IzVBkrJ1XfApfGNl.Z695zqcnPYra', 'Jing', 'Xiao', 'admin@example.com', '+0987654321', true);
 INSERT INTO USERS (id, username, password, first_name, last_name, email, phone_number, enabled) VALUES (3, 'user', '$2a$04$Vbug2lwwJGrvUXTj6z7ff.97IzVBkrJ1XfApfGNl.Z695zqcnPYra', 'Liang', 'Yan', 'admin@example.com', '+0987654321', true);
+INSERT INTO USERS (id, username, password, first_name, last_name, email, phone_number, enabled) VALUES (4, 'user', '$2a$04$Vbug2lwwJGrvUXTj6z7ff.97IzVBkrJ1XfApfGNl.Z695zqcnPYra', 'Haley', 'Kothong', 'user@example.com', '+12333367890', true);
+
+INSERT INTO USERS (id, username, password, first_name, last_name, email, phone_number, enabled) VALUES (5, 'admin', '$2a$04$Vbug2lwwJGrvUXTj6z7ff.97IzVBkrJ1XfApfGNl.Z695zqcnPYra', 'Jack', 'Lim', 'admin@example.com', '+0987654123', true);
+
+INSERT INTO USERS (id, username, password, first_name, last_name, email, phone_number, enabled) VALUES (6, 'user', '$2a$04$Vbug2lwwJGrvUXTj6z7ff.97IzVBkrJ1XfApfGNl.Z695zqcnPYra', 'Rhea', 'Karthik', 'admin@example.com', '+0987655561', true);
+
 
 INSERT INTO ROLE (id, name) VALUES (1, 'ROLE_USER');
 INSERT INTO ROLE (id, name) VALUES (2, 'ROLE_ADMIN');
@@ -11,4 +17,25 @@ INSERT INTO USER_ROLE (user_id, role_id) VALUES (1, 1);
 INSERT INTO USER_ROLE (user_id, role_id) VALUES (1, 3);
 INSERT INTO USER_ROLE (user_id, role_id) VALUES (2, 1);
 INSERT INTO USER_ROLE (user_id, role_id) VALUES (2, 2);
+
+INSERT INTO review (id, user_id, product_id, title, rating, comment, create_date, status) values (1, 2, 12, 'cute', 5,
+ 'I got this jacket for my daughter, she is very picky about the fit and she loves it. 
+ She can wear her sweater underneath easily to layer up on freezing day.', '2019-01-26', 'ready'); 
+
+INSERT INTO review (id, user_id, product_id, title, rating, comment, create_date, status) values (3, 1, 2, 'not recommended', 1,
+ 'I just received this coat and I was shocked it’s already falling apart I don’t think this coat will last more than a couple of weeks you get what you pay for I guess, 
+ I bought another coat ck and the difference is really worth the 20 dollars extra', '2019-01-25', 'deleted');
+ 
+ 
+INSERT INTO review (id, user_id, product_id, title, rating, comment, create_date, status) values (4, 3, 12, 'nice but runs small', 3,
+ 'Bought the Medium for my 10 year old. Runs too small. Returned and got a different jacket', '2019-01-27', 'pending');
+ 
+ 
+INSERT INTO review (id, user_id, product_id, title, rating, comment, create_date, status) values (5, 1, 12, 'great product', 5,
+ 'It was a Christmas present and she loved it. She really loved the scarf and it was a perfect fit', '2019-01-20', 'ready');
+ 
+ 
+INSERT INTO review (id, user_id, product_id, title, rating, comment, create_date, status) values (6, 4, 12, 'poor zipper', 1,
+ 'Within 2 months, Wouldn’t stay zipped. Came unzipped from the bottom', '2019-01-23', 'deleled');
+
 

@@ -139,7 +139,7 @@ public class TokenHelperTest {
                 .thenReturn(DateUtil.now());
 
         User user = mock(User.class);
-        when(user.getLastPasswordResetDate()).thenReturn(new Timestamp(DateUtil.tomorrow().getTime()));
+        when(user.getCreateDate()).thenReturn(new Timestamp(DateUtil.tomorrow().getTime()));
         String token = createToken(device);
         assertThat(tokenHelper.validateToken(token, user)).isFalse();
     }

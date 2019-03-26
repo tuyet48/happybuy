@@ -7,5 +7,6 @@ import com.happybuy.model.Review;
 public interface ReviewRepository {
 	List<Review> findAll();	
 	List<Review> findByProd(int id);
+	boolean save(Review review);
 
 }

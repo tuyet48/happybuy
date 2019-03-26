@@ -16,7 +16,7 @@ import com.happybuy.model.Category;
 import com.happybuy.service.CategoryService;
 
 @RestController
-@RequestMapping("/no-auth/category/")
+@RequestMapping("/rest/no-auth/category/")
 public class CategoryController {
 	//My name is Tuyet	
 	@Autowired

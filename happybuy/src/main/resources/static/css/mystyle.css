@@ -43,6 +43,13 @@ li{
     text-align:center;
     min-width: 1em;   
 }
+.menu .btn-login, .btn-signup{
+    border: none;
+    background-color: #FFFFFF; 
+    height: 30px; 
+    margin-top: 2px; 
+}
+
 .fa-shopping-cart:before{
     color:#888888;
     font-size: 20px;    
@@ -561,7 +568,7 @@ ul.breadcrumb li a:hover {
     height: 35px;
     width: 150px;
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     border: 0;
 }
 .stars{
@@ -575,48 +582,38 @@ ul.breadcrumb li a:hover {
     margin-top: 30px;
     margin-bottom: 30px;
 }
-.login-form{
-    height: 550px;
-    border: solid 5px lightgray;
-    width: 45%;
-    text-align: left;   
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    font-family: serif;
-    font-size: 15px;
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-top: 30px;
-    border-radius: 2px;
+.signup-header, .login-header{
+    height: 25px;
+    padding-top: 5px;
 }
-.login-form input{
+.close{
+    width: 65px;
+    margin-right: 5px;   
+}
+.signup-body input{
     width: 100%;
-    height: 40px;
+    height: 27px;
     border-radius: 2px;
     border: solid 1px lightgrey;
-    padding-left: 10px;
+    padding-left: 10px;  
+    line-height: 1px;
 }
-.login-form button{
-    height: 45px;
-    width: 101%;  
-    font-size: 20px;
-    font-weight: bold;
+.signup-body, .login-body button{
+    width:100%;
 }
-.sign-up{
-    margin-top: 10px;
-    margin-right: 10px;
-    text-align: right;
+.signup-body{
+    height: 480px;    
+    padding-left: 25px;
+    padding-right: 25px;    
 }
-.form h3, h5{
-    font-weight: bold;
+.login-body{
+    height: 300px;
+    padding-left: 25px;
+    padding-right: 25px; 
 }
-.login-form a{
-    color: #68acce;
-}
-.login-form h2, h3, h5, p, a, button{
-    margin-top: 15px;
-    margin-bottom: 15px;
+.signup-body, .login-body p{
+    font-size: 12px;  
+    padding-top: 5px;
 }
 table {
     font-family: arial, sans-serif;

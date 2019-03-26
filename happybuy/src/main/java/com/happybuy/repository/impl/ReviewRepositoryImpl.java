@@ -7,10 +7,11 @@ import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.happybuy.model.Product;
 import com.happybuy.model.Review;
 import com.happybuy.repository.ReviewRepository;
 
@@ -40,5 +41,11 @@ public class ReviewRepositoryImpl implements ReviewRepository{
 		List<Review> reviews = query.getResultList();
 		return reviews;		
 	}
-	
+
+	@Override
+	@Transactional
+	public boolean save(Review review) {
+		em.persist(review);		
+		return true;
+	}	
 }

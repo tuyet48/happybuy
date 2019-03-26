@@ -151,7 +151,7 @@ public class TokenHelper {
         return (
                 username != null &&
                 username.equals(userDetails.getUsername()) &&
-                        !isCreatedBeforeLastPasswordReset(created, user.getLastPasswordResetDate())
+                        !isCreatedBeforeLastPasswordReset(created, user.getCreateDate())
         );
     }
 
@@ -168,7 +168,6 @@ public class TokenHelper {
         if ( authHeader != null && authHeader.startsWith("Bearer ")) {
             return authHeader.substring(7);
         }
-
         return null;
     }
 

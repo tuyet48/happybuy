@@ -117,6 +117,7 @@ public class Review {
 
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
-	}	
-		
+	}
+	
+	
 }

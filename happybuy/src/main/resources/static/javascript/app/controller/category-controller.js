@@ -15,7 +15,7 @@ function($scope, $http, authService, $routeParams){
 			}	
 			console.log("request: ", request);			
 		$http({
-			url: "/no-auth/product/find-by-category",
+			url: "/rest/no-auth/product/find-by-category",
 			method: "POST",
 			data: request,
 			headers: authService.createAuthorizationTokenHeader()
@@ -32,7 +32,7 @@ function($scope, $http, authService, $routeParams){
 
 	$scope.getNumberOfPages = function () {
 		$http({
-			url: "/no-auth/product/count-pages",
+			url: "/rest/no-auth/product/count-pages",
 			method: "GET",
 			params: {
 				categoryId: $scope.categoryId,

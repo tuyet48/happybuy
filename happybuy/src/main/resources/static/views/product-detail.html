@@ -114,20 +114,16 @@
         </div>
         <h4>REVIEWS</h4><br>
         <span>Be the first to</span><br>
-        <button class="write-review">Write a review</button>       
-        <div class="comment">
-            <div class="stars">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-            </div>
-            <p>December 5, 2018</p>
-            <span class="saving">CUTE BUY</span>
-            <p>My daughter loved this jacket, now she has a moto jacket similar to one that I have,
-                but its age appropriate for a 6yo.
-            </p>
+        <button class="write-review" ng-click="showReviewClick()">Write a review</button> 
+        <div class="myReview" ng-show="showReview">    
+            <input type="number" max="5" placeholder = "Rating (1 to 5)"/><br /><br />                
+            <input type="text" ng-model="reviewTitle" placeholder="Review title" required="required" /><br /><br />    
+            <textarea rows="5" cols="50" placeholder="Comment" required="required" ></textarea><br /><br />         
+            <input type="text" placeholder="Choose a nickname" required="required" /><br />
+            <label>Would you recommend this product:<label><br />
+            <input type="checkbox" name="yesbtn" ng-model="user.preference" value="yes" required="required" />Yes</label><br />                
+            <input type="submit" ng-click="cancelReview()" value="CANCEL" />
+            <input type="submit" ng-click="sendReview()" value="SEND" /><br /> <br />     
         </div>
         <div class="comment" ng-repeat="review in reviews">
             <div class="stars">

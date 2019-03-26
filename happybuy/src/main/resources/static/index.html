@@ -7,8 +7,8 @@
     
     <script src="javascript/jquery-3.3.1.min.js"></script>
     <script src="javascript/angular/angular.min.js"></script>
-    <script src="javascript/angular/angular-route.js"></script>
-    <script src="css/bootstrap/bootstrap.min.js"></script>
+    <script src="javascript/angular/angular-route.js"></script> 
+    <script src="css/bootstrap/bootstrap.min.js"></script>  
 
     <script src="javascript/app.js"></script>
     <script src="javascript/app/service/const-uri.js"></script>
@@ -16,10 +16,10 @@
     <script src="javascript/app/controller/index-controller.js"></script>
     <script src="javascript/app/controller/home-controller.js"></script>
     <script src="javascript/app/controller/about-controller.js"></script>
-    <script src="javascript/app/controller/contact-controller.js"></script>
-    <script src="javascript/app/controller/women-controller.js"></script>  
+    <script src="javascript/app/controller/contact-controller.js"></script>   
     <script src="javascript/app/controller/category-controller.js"></script> 
-    <script src="javascript/app/controller/product-controller.js"></script>   
+    <script src="javascript/app/controller/product-controller.js"></script>  
+   
     
 </head>
 <body ng-controller="IndexCtrl">
@@ -35,12 +35,13 @@
             </div>
             <div class="col-md-4 log-cart">
                 <ul>
-                    <li><a href="login.com"><i class="fa fa-user"></i></a></li>
-                    <li><a href="login.com">Log In/ Sign Up</a></li>
+                    <li><a href="#/login"><i class="fa fa-user"></i></a></li>                   
+                    <li><button type="button" class="btn-signup" data-toggle="modal" data-target="#myRegForm">Sign Up</button></li>
+                    <li><button type="button" class="btn-login" data-toggle="modal" data-target="#myLoginForm">Login</button></li>
                     <li>|</li>
                     <li class="cart" id="cartCount">
                         <span class="p1 fa-stack fa-3x has-badge" data-count="12">
-                            <a href="cart.com"><i class="p3 fa fa-shopping-cart fa-stack-2x xfa-inverse"></i></a>
+                            <a href="#/cart"><i class="p3 fa fa-shopping-cart fa-stack-2x xfa-inverse"></i></a>
                         </span>
                     </li>
                 </ul>
@@ -146,6 +147,55 @@
         </div>
         <div class="copy-right">
             <h5>HappyBuy @ 2018. Designed by Sofia Ta</h5>
+        </div>
+    </div>
+
+    <!--Popup for Register Form-->    
+    <div class="modal fade" id="myRegForm" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">                     
+                <div class="signup-header">   
+                    <button type="button" class="close" data-dismiss="modal">&times;</button><br/> 
+                </div>    
+                <div class="signup-body">
+                    <h4><b>Secure create account</b></h4><br>
+                    <p>First name</p>
+                    <input class="fname" type="text" ng-model="fname" placeholder=""><br>
+                    <p>Last name</p>
+                    <input class="lname" type="text" ng-model="fname" placeholder=""><br>
+                    <p>Email address</p>
+                    <input class="email" type="text" placeholder=""><br>
+                    <p>Password</p>
+                    <input class="password" type="text" placeholder=""><br>
+                    <p>Confirm Password</p>
+                    <input class="password" type="text" placeholder=""><br>
+                    <p>By creating account, you agree to our <b>Privacy Policy</b>
+                        and <b>Terms & Conditions.</b></p>
+                    <button class="btn btn-warning" ng-click="registerFunc()" id="cal">CREATE ACCOUNT</button>
+                    <p><a href="home.com">No thanks. Continue browsing</a></p>
+                </div>    
+            </div>
+        </div>
+    </div>
+    <!--Popup for Login Form-->
+    <div class="modal fade" id="myLoginForm" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="login-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button><br />                   
+                </div>
+                <div class="login-body">
+                    <h4><b>Secure Log In</b></h4><br>                   
+                    <p>Email address</p>
+                    <input class="email" type="text" placeholder=""><br>
+                    <p>Password</p>
+                    <input class="password" type="text" placeholder=""><br>                   
+                    <p>By logging into your account, you agree to our <b>Privacy Policy</b>
+                        and <b>Terms & Conditions.</b></p>
+                    <button class="btn btn-warning"  id="cal">LOG IN</button>
+                    <p><a href="home.com">No thanks. Continue browsing</a></p>
+                </div>
+            </div>
         </div>
     </div>
 </body>

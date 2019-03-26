@@ -79,7 +79,7 @@ VALUES (14, 'INC', 'Navy', 'Boy Thermal Shirt', 5 , 56.00, 49.99, 'XL', 3);
 INSERT INTO PRODUCT (id, brand, color, name, quantity, regular_price, sale_price, size, category_id)
 VALUES (15, 'Rare', 'White', 'Boy Waffle-Knit Jogger Pants', 3 , 56.00, 56.99, 'S', 3);
 
-INSERT INTO IMAGE (id, image, product_id) VALUES (1, 'assets/women12.jpg', 1);
+INSERT INTO IMAGE (id, image, product_id) VALUES (1, 'assets/women2.jpg', 1);
 
 INSERT INTO IMAGE (id, image, product_id) VALUES (2, 'assets/girlcoatdress.jpg', 12);
 
@@ -88,6 +88,30 @@ INSERT INTO IMAGE (id, image, product_id) VALUES (3, 'assets/girlcoatdress2.jpg'
 INSERT INTO IMAGE (id, image, product_id) VALUES (4, 'assets/girlcoatdress3.jpg', 12);
 
 INSERT INTO IMAGE (id, image, product_id) VALUES (5, 'assets/girlcoatdress4.jpg', 12);
+
+INSERT INTO review (id, user_id, product_id, title, rating, comment, create_date, status) values (1, 2, 12, 'cute', 5,
+ 'I got this jacket for my daughter, she is very picky about the fit and she loves it. 
+ She can wear her sweater underneath easily to layer up on freezing day.', '2019-01-26', 'ready'); 
+
+
+INSERT INTO review (id, user_id, product_id, title, rating, comment, create_date, status) values (2, 1, 2, 'not recommended', 1,
+ 'I just received this coat and I was shocked it’s already falling apart I don’t think this coat will last more than a couple of weeks you get what you pay for I guess, 
+ I bought another coat ck and the difference is really worth the 20 dollars extra', '2019-01-25', 'deleted');
+ 
+ 
+
+INSERT INTO review (id, user_id, product_id, title, rating, comment, create_date, status) values (3, 3, 12, 'nice but runs small', 3,
+ 'Bought the Medium for my 10 year old. Runs too small. Returned and got a different jacket', '2019-01-27', 'pending');
+ 
+ 
+
+INSERT INTO review (id, user_id, product_id, title, rating, comment, create_date, status) values (4, 1, 12, 'great product', 5,
+ 'It was a Christmas present and she loved it. She really loved the scarf and it was a perfect fit', '2019-01-20', 'ready');
+ 
+ 
+
+INSERT INTO review (id, user_id, product_id, title, rating, comment, create_date, status) values (5, 4, 12, 'poor zipper', 1,
+ 'Within 2 months, Wouldn’t stay zipped. Came unzipped from the bottom', '2019-01-23', 'deleled');
 
 
 

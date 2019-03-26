@@ -72,8 +72,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/**/*.html",
                         "/**/*.css",
                         "/**/*.js",
-                        "/no-auth/**",
-                        "/assets/**"
+                        "/rest/no-auth/**",
+                        "/assets/**"                       
+                        
                 ).permitAll()
                 .antMatchers("/auth/**").permitAll()
                 .anyRequest().authenticated().and()
@@ -82,14 +83,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
     }
 
-
     @Override
     public void configure(WebSecurity web) throws Exception {
         // TokenAuthenticationFilter will ignore the below paths
         web.ignoring().antMatchers(
                 HttpMethod.POST,
                 "/auth/login",
-                "/no-auth/**"
+                "/rest/no-auth/**"
         );
         web.ignoring().antMatchers(
                 HttpMethod.GET,
@@ -100,6 +100,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 "/**/*.html",
                 "/**/*.css",
                 "/**/*.js"
+               
+                
             );
 
     }

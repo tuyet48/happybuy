@@ -19,7 +19,7 @@ import com.happybuy.model.Product;
 import com.happybuy.service.ProductService;
 
 @RestController
-@RequestMapping("/no-auth/product/")
+@RequestMapping("/rest/no-auth/product/")
 public class ProductController {
 	
 	@Autowired

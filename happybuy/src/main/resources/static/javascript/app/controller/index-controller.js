@@ -9,9 +9,23 @@ happybuy.controller('IndexCtrl', ['$scope', '$http', function ($scope, $http) {
     }
     $scope.getRequest();
 
-    $scope.registerFunc = function () { 
-        console.log("register function");
+
+    //tạo object $scope.credentials chứa email và password
+    $scope.credentials = {};
+
+    $scope.register = function () {
+        console.log("Data will be sent: ", $scope.credentials);
+        $http({
+			url: '/rest/no-auth/register',
+			method: 'POST',
+			data: $scope.credentials
+			//headers: authService.createAuthorizationTokenHeader()
+		})
+		.then(function(response) {
+			console.log(response);
+		})
+		.catch(function(error) {
+			console.log(error);
+		});
     }
-
-
 }]);

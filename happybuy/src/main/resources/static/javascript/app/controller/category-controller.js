@@ -1,6 +1,5 @@
 happybuy.controller('CategoryProductCtrl', ['$scope','$http','AuthService','$routeParams',
-function($scope, $http, authService, $routeParams){
-	
+function($scope, $http, authService, $routeParams){	
 	$scope.maxSize = 0;
 	$scope.categoryId = $routeParams.categoryId;  
 	$scope.pageList=[];

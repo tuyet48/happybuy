@@ -598,7 +598,13 @@ ul.breadcrumb li a:hover {
     padding-left: 10px;  
     line-height: 1px;
 }
-.signup-body, .login-body button{
+.login-body input{
+    width: 100%;
+}
+.login-body button{
+    width:100%;
+}
+.signup-body button{
     width:100%;
 }
 .signup-body{
@@ -607,7 +613,7 @@ ul.breadcrumb li a:hover {
     padding-right: 25px;    
 }
 .login-body{
-    height: 300px;
+    height: 310px;
     padding-left: 25px;
     padding-right: 25px; 
 }

@@ -48,10 +48,6 @@ happybuy.controller('ProductCtrl', ['$scope', '$routeParams', '$http',
 		$scope.showReview = false;
 		$scope.showReviewClick = function(){
 			$scope.showReview = !$scope.showReview;
-
 		};
-	
-	
-
 	}]);
 

@@ -621,6 +621,9 @@ ul.breadcrumb li a:hover {
     font-size: 12px;  
     padding-top: 5px;
 }
+.errorMessage{
+    color: red;
+}
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;

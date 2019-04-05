@@ -61,12 +61,20 @@ public class UserController {
 	private ResponseDTO<Boolean> validate(UserDTO userDTO) {
 		ResponseDTO<Boolean> responseDTO = new ResponseDTO<Boolean>();
 		responseDTO.setData(false);
-		if (userDTO.getEmail().length() == 0 || userDTO.getEmail().isEmpty()) {
+		if (userDTO.getFname() == null ) {
+			responseDTO.setErrorMessage(ErrorMessage.ERROR_FNAME_EMPTY);
+		} else if (userDTO.getFname().length() >30) {
+			responseDTO.setErrorMessage(ErrorMessage.ERROR_FNAME_INVALID);	
+		}else if(userDTO.getLname() == null) {
+			responseDTO.setErrorMessage(ErrorMessage.ERROR_LNAME_EMPTY);
+		} else if (userDTO.getLname().length() > 30) {
+			responseDTO.setErrorMessage(ErrorMessage.ERROR_LNAME_INVALID);	
+		}else if(userDTO.getEmail() == null) {
 			responseDTO.setErrorMessage(ErrorMessage.ERROR_EMAIL_EMPTY);
-		} else if (userDTO.getPassword().length() == 0 || userDTO.getPassword().isEmpty()) {
-			responseDTO.setErrorMessage(ErrorMessage.ERROR_PASSWORD_EMPTY);
+		} else if (userDTO.getPassword()==null) {
+			responseDTO.setErrorMessage(ErrorMessage.ERROR_PASSWORD_EMPTY);				
 		} else if (userDTO.getPassword().length() < 8) {
-			responseDTO.setErrorMessage(ErrorMessage.ERROR_PASSWORD_INVALID);
+			responseDTO.setErrorMessage(ErrorMessage.ERROR_PASSWORD_INVALID);			
 		} else {
 			responseDTO.setData(true);
 		}

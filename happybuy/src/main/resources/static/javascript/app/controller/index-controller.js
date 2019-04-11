@@ -1,4 +1,7 @@
 happybuy.controller('IndexCtrl', ['$scope', '$http', function ($scope, $http) {
+
+    $scope.isLogined = false;
+
     $scope.getRequest = function () {           
         $http.get("/rest/no-auth/category/find-all")
             .then(function successCallback(response) {
@@ -58,19 +61,25 @@ happybuy.controller('IndexCtrl', ['$scope', '$http', function ($scope, $http) {
         console.log("Data will be sent: ", $scope.credentials);
         if ($scope.validation() == true){       
             console.log("Dang goi api tu BE");  
-            /*$http({
+            $http({
                 url: '/rest/no-auth/register',
                 method: 'POST',
                 data: $scope.credentials			
             })
             .then(function(response) {          
-                 $('#myRegForm').modal('toggle'); 
-                 $scope.fname = response.data.data.fname;
-                 $scope.lname = response.data.data.lname;                
+                $('#myRegForm').modal('toggle');       
+                $scope.isLogined =response.data.data;                
+                $scope.fullName = $scope.credentials.fname + " " + $scope.credentials.lname;                              
+                console.log("fname of row 1:", $scope.fullName);                
             })
             .catch(function(error) {
                 $scope.errorMessage = error.data.errorMessage;
-            }); */      
+            });    
         }       
     }
+    
+    $scope.logOut = function(){
+        $scope.isLogined = false;
+    }
+
 }]);

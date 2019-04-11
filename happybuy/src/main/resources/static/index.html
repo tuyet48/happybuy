@@ -36,11 +36,20 @@
             <div class="col-md-4 log-cart">
                 <ul>                       
                     <li><a href="#/login"><i class="fa fa-user"></i></a></li>                   
-                    <li><button type="button" class="btn-signup" data-toggle="modal" data-target="#myRegForm" ng-hide="myText">SignUp</button></li>
-                    <li><button type="button" class="btn-login" data-toggle="modal" data-target="#myLoginForm" ng-hide="myText">Login</button></li>
-                    <li><button type="button" class="btn-signup" data-toggle="modal" data-target="#myRegForm" ng-show="myText">{{fname}}</button></li>
-                    <li><button type="button" class="btn-login" data-toggle="modal" data-target="#myLoginForm" ng-show="myText">{{lname}}</button></li>
-                    <li>|</li>
+                    <li><button type="button" class="btn-signup" data-toggle="modal" data-target="#myRegForm" ng-hide="isLogined">SignUp</button></li>
+                    <li><button type="button" class="btn-login" data-toggle="modal" data-target="#myLoginForm" ng-hide="isLogined">Login</button></li>
+                    <!-- <li ng-show="isLogined">{{fullName}}</li> -->
+                    <li ng-show="isLogined">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle"  ng-show="isLogined" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{fullName}}
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="javascript:void(0)" ng-click="logOut()">Log Out</a><br/>
+                                <a class="dropdown-item" href="javascript:void(0)">Update Profile</a>                        
+                            </div>
+                        </div>
+                    </li>                      
                     <li class="cart" id="cartCount">
                         <span class="p1 fa-stack fa-3x has-badge" data-count="12">
                             <a href="#/cart"><i class="p3 fa fa-shopping-cart fa-stack-2x xfa-inverse"></i></a>

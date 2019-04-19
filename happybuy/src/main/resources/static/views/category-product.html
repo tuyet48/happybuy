@@ -1,7 +1,7 @@
 <div class="content">
     <div class="row">
         <div class="col-md-4 prodByCate" ng-repeat="product in products">
-            <a href="men1.com"><img src="{{product.img}}"></a>
+            <a href="#/product/{{product.id}}"><img src="{{product.img}}"></a>
             <div class="description">
                 <li>{{product.name}}</li>
                 <li><delete>$ {{product.regularPrice}}</delete></li>

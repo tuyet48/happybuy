@@ -6,29 +6,33 @@ package com.happybuy.security.auth;
 public class JwtAuthenticationRequest {
     private String username;
     private String password;
-
-    public JwtAuthenticationRequest() {
+   // private String email;
+   
+	public JwtAuthenticationRequest() {
         super();
     }
 
     public JwtAuthenticationRequest(String username, String password) {
         this.setUsername(username);
         this.setPassword(password);
-    }
+       // this.setEmail(email);
+    }   
 
     public String getUsername() {
-        return this.username;
-    }
+		return username;
+	}
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-    public String getPassword() {
+	public String getPassword() {
         return this.password;
     }
 
     public void setPassword(String password) {
         this.password = password;
     }
+ 
+
 }

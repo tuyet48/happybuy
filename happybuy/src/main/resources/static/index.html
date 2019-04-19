@@ -41,7 +41,8 @@
                     <!-- <li ng-show="isLogined">{{fullName}}</li> -->
                     <li ng-show="isLogined">
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle"  ng-show="isLogined" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-secondary dropdown-toggle"  ng-show="isLogined" type="button" 
+                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 {{fullName}}
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -175,7 +176,7 @@
                     <p>Last name</p>
                     <input class="lname" type="text" ng-model="credentials.lname" placeholder=""><br>
                     <p>Email address</p>
-                    <input class="email" type="email" ng-model="credentials.email" placeholder=""><br>
+                    <input class="email" type="email" ng-model="credentials.email" placeholder=""><br>                    
                     <p>Password</p>
                     <input class="password" type="password" ng-model="credentials.password" placeholder=""><br>
                     <p>Confirm Password</p>
@@ -198,13 +199,13 @@
                 </div>
                 <div class="login-body">
                     <h4><b>Secure Log In</b></h4><br>                   
-                    <p>Email address</p>
-                    <input class="email" type="text" placeholder=""><br>
+                    <p>User Name</p>
+                    <input class="username" ng-model="credentialsLogin.username" type="text" placeholder=""><br>
                     <p>Password</p>
-                    <input class="password" type="text" placeholder=""><br>                   
+                    <input class="password" ng-model="credentialsLogin.password" type="password" placeholder=""><br>                   
                     <p>By logging into your account, you agree to our <b>Privacy Policy</b>
                         and <b>Terms & Conditions.</b></p>
-                    <button class="btn btn-warning"  id="cal">LOG IN</button>
+                    <button class="btn btn-warning" ng-click="login()" id="cal">LOG IN</button>
                     <p><a href="home.com">No thanks. Continue browsing</a></p>
                 </div>
             </div>

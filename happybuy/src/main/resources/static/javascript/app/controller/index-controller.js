@@ -93,10 +93,10 @@ happybuy.controller('IndexCtrl', ['$scope', '$http', function ($scope, $http) {
         })
             .then(function (response) {
                 $('#myLoginForm').modal('toggle');
-                $scope.isLogined = response.data;
-                $scope.fullName = $scope.credentialsLogin.username;    
-                console.log(response);         
-                console.log("Fullname - username: ", $scope.fullName);
+                $scope.isLogined = true;
+                var user = response.data;
+                $scope.fullName = user.firstName + " " +  user.lastName;  
+              
             })
             .catch(function (error) {
                 $scope.errorMessage = error.data.errorMessage;

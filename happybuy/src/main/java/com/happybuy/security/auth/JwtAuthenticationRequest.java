@@ -6,6 +6,7 @@ package com.happybuy.security.auth;
 public class JwtAuthenticationRequest {
     private String username;
     private String password;
+    
    // private String email;
    
 	public JwtAuthenticationRequest() {

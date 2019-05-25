@@ -1,7 +1,7 @@
 happybuy.controller('IndexCtrl', ['$scope', '$http', function ($scope, $http) {
 
     $scope.isLogined = false;
-
+    
     $scope.getRequest = function () {
         $http.get("/rest/no-auth/category/find-all")
             .then(function successCallback(response) {
@@ -18,7 +18,7 @@ happybuy.controller('IndexCtrl', ['$scope', '$http', function ($scope, $http) {
     $scope.credentialsLogin = {};
 
     $scope.validateEmail = function (email) {
-        var email = $scope.credentials.email;
+        var email = $scope.credential;
         console.log("Email:", email);
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
@@ -91,16 +91,15 @@ happybuy.controller('IndexCtrl', ['$scope', '$http', function ($scope, $http) {
             method: 'POST',
             data: $scope.credentialsLogin
         })
-            .then(function (response) {
-                $('#myLoginForm').modal('toggle');
-                $scope.isLogined = true;
-                var user = response.data;
-                $scope.fullName = user.firstName + " " +  user.lastName;  
-              
-            })
-            .catch(function (error) {
-                $scope.errorMessage = error.data.errorMessage;
-            });
-    }
-
+        .then(function (response) {
+            $('#myLoginForm').modal('toggle');
+            $scope.isLogined = true;
+            var user = response.data;
+            $scope.fullName = user.firstName + " " +  user.lastName;  
+            
+        })
+        .catch(function (error) {
+            $scope.errorMessage = error.data.errorMessage;
+        });
+    }   
 }]);

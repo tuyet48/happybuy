@@ -47,9 +47,9 @@
                     Quanity
                 </li>
                 <li class="specification">
-                  <input type="number" min="1" max="100">
+                  <input type="number" min="1" max="100" ng-model="selectedQty"> 
                 </li>
-                <li><button class="btn-addToCart">ADD TO CART</button></li>
+                <li><button class="btn-addToCart" ng-click="addToCart()">ADD TO CART</button></li>
             </ul>
         </div>
     </div>

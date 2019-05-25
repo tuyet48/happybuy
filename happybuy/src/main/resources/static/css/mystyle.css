@@ -451,7 +451,7 @@ ul.breadcrumb li a:hover {
     border: 0;
 }
 .order{
-    width: 85%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -462,23 +462,25 @@ ul.breadcrumb li a:hover {
     padding-left: 10px;
     padding-right: 10px;
 }
-.order_subtotal{
-    border-bottom: 1px solid lightgray;
-}
 .order_image{
-    width: 25%;
+    width: 20%;    
 }
 .order_description{    
-    width: 50%;
-    font-size: 13px;
+    width: 40%; 
+    padding-left: 15px;
 }
 .order_quantity{  
-    width: 10%;
+    width: 15%;
     text-align: center;
 }
 .order_price{
     width: 15%;
     text-align: center;
+}
+.order_remove{
+    width: 10%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .pink{
     background-color: pink;

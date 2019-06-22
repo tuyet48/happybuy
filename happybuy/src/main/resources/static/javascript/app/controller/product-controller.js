@@ -52,22 +52,34 @@ happybuy.controller('ProductCtrl', ['$scope', '$routeParams', '$http', '$rootSco
 		$scope.showReviewClick = function(){
 			$scope.showReview = !$scope.showReview;
 		};
+		var itemList = [];
 
 		$scope.addToCart = function(){
 			if(localStorage.getItem("qty") != undefined){
 				console.log("if is running");
+				console.log($scope.selectedQty);
 				$rootScope.qty = parseInt(localStorage.getItem("qty")) + $scope.selectedQty;
 			}else{
 				$rootScope.qty = $scope.selectedQty;	
 				console.log("else is running");
 			}
 			localStorage.setItem("qty", $rootScope.qty);
-			//console.log("Qty from Local Storage=", parseInt());
-			
+			//console.log("Qty from Local Storage=", parseInt());			
 			//$rootScope.qty = parseInt(localStorage.getItem("qty")) + $scope.selectedQty;							
 			//localStorage.setItem("qty", $rootScope.qty);
 			//cartService.saveSelectedProduct($scope.product);
+			
+			/*var item = $scope.product;
+			console.log("one item:", item);	
+			itemList.push(item);
+			console.log("Length: ", itemList.length);
+			console.log("list item:", itemList)
+			localStorage.setItem("products", itemList)	*/
+			$scope.product.quantity = $scope.selectedQty;
+			cartService.saveSelectedProduct($scope.product);
+			/* $scope.name = $scope.product.name;
+			localStorage.setItem("name", $scope.name);
+			console.log("Product Name: ", $scope.name); */
 		};
-
 	}]);
 

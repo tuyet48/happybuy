@@ -461,26 +461,32 @@ ul.breadcrumb li a:hover {
 .order_subtotal{
     padding-left: 10px;
     padding-right: 10px;
+    text-align: center;
+    border-right-color: #cccccc;
 }
 .order_image{
-    width: 20%;    
+    width: 20%;  
+    border-right-color: #cccccc;
 }
-.order_description{    
-    width: 40%; 
-    padding-left: 15px;
+.order_name{
+    width: 20%;  
+    border-right-color: #cccccc;
 }
 .order_quantity{  
     width: 15%;
     text-align: center;
+    border-right-color: #cccccc;
 }
 .order_price{
     width: 15%;
     text-align: center;
+    border-right-color: #cccccc;
 }
 .order_remove{
     width: 10%;
     padding-left: 10px;
     padding-right: 10px;
+    border-right-color: #cccccc;
 }
 .pink{
     background-color: pink;

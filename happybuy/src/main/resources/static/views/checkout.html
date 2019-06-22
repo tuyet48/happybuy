@@ -1,0 +1,126 @@
+<div class="content">
+    <div class="login-form">
+        <h1>Your Order</h1>
+        <div class="paypal">
+            <button class="btn btn-secondary" id="al">
+                <h3>PayPal</h3>
+            </button>
+        </div>
+        <div class="login-head">
+            <p><a href="#/login">Sign In</a></p>
+        </div>
+
+        <div class="guest-info">
+            <h3>GUEST INFO</h3>
+            <h5>Who is placing this order?</h5>
+            <h5>Name</h5>
+            <input class="name" id="name" type="text" name="name" placeholder=""><br/>
+            <h5>Email address</h5>
+            <input class="em" id="fnum" type="text" name="email" placeholder=""><br/><br/>
+            <button class="btn btn-warning" id="cal">NEXT</button>
+        </div><br />
+
+        <div class="shipping-address">
+            <h3>SHIPPING ADDRESS</h3>
+            <h5>Country</h5>
+            <input class="country" id="country" type="text" name="country" placeholder="United States"><br>
+            <h5>Address</h5>
+            <input class="em" id="fnum" type="text" name="email" placeholder=""><br/><br/>
+            <input class="em" id="fnum" type="text" name="email" placeholder=""><br/>
+            <div class="row">
+                <div class="col-md-4 city">
+                    <h5>City</h5>
+                    <input class="city-input" id="city" type="text" name="city" placeholder="">
+                </div>
+                <div class="col-md-4 state">
+                    <h5>State</h5>
+                    <select>
+                        <option>Alaska</option>
+                        <option>Colorado</option>
+                        <option>Florida</option>
+                        <option>Kentucky</option>
+                        <option>New York</option>
+                        <option>Washington</option>
+                    </select>
+                </div>
+                <div class="col-md-4 zipcode">
+                    <h5>ZipCode</h5>
+                    <input class="zipcode-input" id="zipcode" type="text" name="city" placeholder="">
+                </div>
+            </div>
+            <h5>Mobile Number</h5>
+            <input class="phone" id="phone" type="text" name="phone" placeholder="(XXX) XXX-XXXX"><br>
+            <button class="btn btn-warning" id="cal">SAVE</button>
+            <button class="btn btn-warning" id="cal">Cancel</button>
+        </div><br />
+
+        <div class="payment">
+            <h3>PAYMENT METHOD</h3>
+            <h5>Card Number</h5>
+            <div class="row card">
+                <div class="col-md-4 cardNum">                   
+                    <input class="card-number" id="cardNum" type="text" name="card">
+                </div>
+                <div class="col-md-7 cardType">
+                    <h5>Visa, Discovery, Master</h5>
+                </div>
+            </div>
+            <div class="row expiration">
+                <h5>Expiration Date</h5>
+                <div class="col-md-4 month">
+                    <select>
+                        <option>January</option>
+                        <option>Febuary</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>June</option>
+                        <option>July</option>
+                        <option>August</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
+                    </select>
+                </div>
+                <div class="col-md-4 year">
+                    <input class="year" id="year" type="text" name="year">
+                </div>
+            </div>
+            <h5>Security Code</h5>
+            <input class="security-code" id="secuCode" type="text" name="year" placeholder="XXX"><br />
+            <button class='btn btn-warning'>SAVE</button>
+            <button class='btn btn-warning'>Cancel</button>
+        </div><br />
+
+        <div class="order-confirm">
+            <h3>REVIEW & CONFIRM</h3>
+            <div class="row order-confirm">
+                <table>
+                    <tr>
+                        <td>Subtotal</td>
+                        <td>$100.00</td>
+                    </tr>
+                    <tr>
+                        <td>Shipping</td>
+                        <td>$15.00</td>
+                    </tr> 
+                    <tr>
+                        <td>Estimated Tax</td>
+                        <td>$9.00</td>
+                    </tr> 
+                    <tr>
+                        <td>Order Total</td>
+                        <td>$124.00</td>
+                    </tr>                    
+                </table>
+            </div>
+        </div>
+
+        <p>By placing your order, you agree to our <b>Privacy Policy</b>
+            and <b>Terms & Conditions.</b></p>
+
+        <button class="btn btn-warning" id="placeOrder">PLACE ORDER</button><br/>
+
+    </div>
+</div>
